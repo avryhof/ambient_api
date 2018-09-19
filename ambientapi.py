@@ -30,7 +30,7 @@ class AmbientWeatherStation:
     @staticmethod
     def current_time():
 
-        return lambda: int(round(time.time() * 1000))
+        return int(round(time.time() * 1000))
 
     def get_data(self, **kwargs):
         """
