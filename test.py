@@ -1,6 +1,6 @@
 import pprint
 
-from ambientapi import AmbientAPI
+from ambient_api.ambientapi import AmbientAPI
 
 weather = AmbientAPI()
 
