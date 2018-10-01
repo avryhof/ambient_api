@@ -3,7 +3,7 @@ import time
 
 import requests
 
-import settings
+from ambient_api import settings
 
 
 class AmbientWeatherStation:
