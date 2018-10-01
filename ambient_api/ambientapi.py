@@ -1,12 +1,9 @@
-import os
+import datetime
 import time
 
 import requests
 
-# We can set our keys as environmental variables.  This is useful for secure environments.
-AMBIENT_APPLICATION_KEY = os.environ.get('AMBIENT_APPLICATION_KEY')
-AMBIENT_API_KEY = os.environ.get('AMBIENT_API_KEY')
-AMBIENT_ENDPOINT = os.environ.get('AMBIENT_ENDPOINT',  'https://api.ambientweather.net/v1')
+import settings
 
 
 class AmbientWeatherStation:
@@ -27,11 +24,13 @@ class AmbientWeatherStation:
         self.info = device_dict.get('info', {})
 
     def __str__(self):
+
         return '%s@%s' % (self.info.get('name'), self.mac_address)
 
     @staticmethod
     def current_time():
-        return lambda: int(round(time.time() * 1000))
+
+        return int(round(time.time() * 1000))
 
     def get_data(self, **kwargs):
         """
@@ -67,11 +66,9 @@ class AmbientAPI:
         http_client = kwargs.get('http_client', requests)
 
         self.client = http_client
-
-        # You can also set your API credentials and endpoint in Keyword Arguments.
-        self.endpoint = kwargs.get('ambient_endpoint', AMBIENT_ENDPOINT)
-        self.api_key = kwargs.get('ambient_api_key', AMBIENT_API_KEY)
-        self.application_key = kwargs.get('ambient_application_key', AMBIENT_APPLICATION_KEY)
+        self.endpoint = getattr(settings, 'AMBIENT_ENDPOINT', None)
+        self.api_key = getattr(settings, 'AMBIENT_API_KEY', None)
+        self.application_key = getattr(settings, 'AMBIENT_APPLICATION_KEY', None)
 
     def _api_call(self, service, **kwargs):
         retn = {}
