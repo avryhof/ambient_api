@@ -3,14 +3,28 @@ Ambient API
 
 Python Module to access the Ambient Weather API
 
+## Installation
+
+```bash
+pip install ambient_api
+```
+
+##### Environmental Variables
+```bash
+AMBIENT_ENDPOINT=https://api.ambientweather.net/v1
+AMBIENT_API_KEY=<your-api-key-here>
+AMBIENT_APPLICATION_KEY=<your-application-key-here>
+```
+Get these values by following [these instructions](https://ambientweather.docs.apiary.io/#introduction/authentication).
+
 ## Classes
 There are two classes implemented in this module.
 
 ##### AmbientAPI
-This is the base APIthat youinitialize in your code.
+This is the base API that you initialize in your code.
 
 ```python
-from ambientapi import AmbientAPI
+from ambient_api import AmbientAPI
 
 api = AmbientAPI()
 ``` 
@@ -28,4 +42,4 @@ device = devices[0]
 print(device.get_data())
 ```
 
-Learn more about the Ambient Weather API at []https://ambientweather.docs.apiary.io/#
+Learn more about the Ambient Weather API at the [Ambient Weather API Documentation](https://ambientweather.docs.apiary.io/#).
