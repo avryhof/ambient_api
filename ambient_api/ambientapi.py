@@ -1,4 +1,5 @@
 import datetime
+import pprint
 import time
 
 import requests
@@ -28,9 +29,14 @@ class AmbientWeatherStation:
         return '%s@%s' % (self.info.get('name'), self.mac_address)
 
     @staticmethod
-    def current_time():
+    def convert_datetime(datetime_object):
+        epoch = datetime.datetime.fromtimestamp(0)
 
-        return int(round(time.time() * 1000))
+        return int((datetime_object - epoch).total_seconds() * 1000.0)
+
+    def current_time(self):
+
+        return self.convert_datetime(datetime.datetime.now())
 
     def get_data(self, **kwargs):
         """
@@ -44,6 +50,9 @@ class AmbientWeatherStation:
         """
         limit = int(kwargs.get('limit', 288))
         end_date = kwargs.get('end_date', self.current_time())
+
+        if isinstance(end_date, datetime.datetime):
+            end_date = self.convert_datetime(end_date)
 
         if self.mac_address is not None:
             service_address = 'devices/%s' % self.mac_address
