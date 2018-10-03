@@ -1,3 +1,11 @@
+|PyPI Version| |Build Status| |Coverage Status|
+
+<a href="https://www.codefactor.io/repository/github/avryhof/ambient_api">
+  <img alt="CodeFactor"
+       src=
+   "https://www.codefactor.io/repository/github/avryhof/ambient_api/badge"/>
+</a>
+
 Ambient API
 ==========================
 
