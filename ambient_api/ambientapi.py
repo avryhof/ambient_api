@@ -1,6 +1,4 @@
 import datetime
-import pprint
-import time
 
 import requests
 
@@ -62,7 +60,7 @@ class AmbientWeatherStation:
                 endDate=end_date
             )
 
-            return self.api_instance._api_call(service_address, **data)
+            return self.api_instance.api_call(service_address, **data)
 
 
 class AmbientAPI:
@@ -79,7 +77,7 @@ class AmbientAPI:
         self.api_key = getattr(settings, 'AMBIENT_API_KEY', None)
         self.application_key = getattr(settings, 'AMBIENT_APPLICATION_KEY', None)
 
-    def _api_call(self, service, **kwargs):
+    def api_call(self, service, **kwargs):
         retn = {}
 
         target_url = '%s/%s' % (self.endpoint, service)
@@ -107,7 +105,7 @@ class AmbientAPI:
             A list of AmbientWeatherStation instances.
         """
         retn = []
-        for device in self._api_call('devices'):
+        for device in self.api_call('devices'):
             retn.append(AmbientWeatherStation(self, device))
 
         return retn
