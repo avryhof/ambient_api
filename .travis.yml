@@ -3,7 +3,13 @@ python:
   - "2.7"
   - "3.6"
 # command to install dependencies
-script: python test.py
+script:
+  - python test.py
+  - coverage run test.py
 branches:
   only:
     - master
+install:
+  - pip install codecov
+after_success:
+- codecov
