@@ -1,5 +1,5 @@
-import pprint
 import datetime
+import pprint
 
 from ambient_api.ambientapi import AmbientAPI
 
@@ -16,4 +16,3 @@ for device in devices:
 
     print('Get Data')
     pprint.pprint(device.get_data(end_date=datetime.datetime(year=2018, month=10, day=1)))
-
