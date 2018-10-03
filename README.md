@@ -1,10 +1,5 @@
-|PyPI Version| |Build Status| |Coverage Status|
-
-<a href="https://www.codefactor.io/repository/github/avryhof/ambient_api">
-  <img alt="CodeFactor"
-       src=
-   "https://www.codefactor.io/repository/github/avryhof/ambient_api/badge"/>
-</a>
+[![PyPI](https://img.shields.io/pypi/v/ambient-api.svg?maxAge=2592000)](https://pypi.python.org/pypi/ambient-api) [![Build Status](https://travis-ci.org/avryhof/ambient_api.svg?branch=master)](https://travis-ci.org/avryhof/ambient_api) <a href="https://www.codefactor.io/repository/github/avryhof/ambient_api"><img alt="CodeFactor" src=
+   "https://www.codefactor.io/repository/github/avryhof/ambient_api/badge"/></a>
 
 Ambient API
 ==========================
