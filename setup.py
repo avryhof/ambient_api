@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='ambient_api',
-    version='1.0.1',
+    version='1.0.2',
     packages=['ambient_api'],
     url='https://github.com/avryhof/ambient_api',
     license='MIT',
