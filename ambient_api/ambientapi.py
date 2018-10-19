@@ -28,9 +28,14 @@ class AmbientWeatherStation:
 
     @staticmethod
     def convert_datetime(datetime_object):
-        epoch = datetime.datetime.fromtimestamp(0)
+        try:
+            posix_timestamp = datetime_object.timestamp()
 
-        return int((datetime_object - epoch).total_seconds() * 1000.0)
+        except AttributeError:
+            epoch = datetime.datetime.fromtimestamp(0)
+            posix_timestamp = (datetime_object - epoch).total_seconds()
+
+        return int(posix_timestamp * 1000.0)
 
     def current_time(self):
 
