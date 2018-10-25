@@ -32,7 +32,7 @@ class AmbientWeatherStation:
             posix_timestamp = datetime_object.timestamp()
 
         except AttributeError:
-            epoch = datetime.datetime.fromtimestamp(0)
+            epoch = datetime.datetime(year=1969, month=12, day=31, hour=19, minute=0, second=0)
             posix_timestamp = (datetime_object - epoch).total_seconds()
 
         return int(posix_timestamp * 1000.0)
