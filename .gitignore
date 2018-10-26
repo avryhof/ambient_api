@@ -196,3 +196,4 @@ gen### VisualStudioCode template
 !.vscode/extensions.json
 
 /*.env
+/ambient_api.log
