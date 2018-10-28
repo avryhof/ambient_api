@@ -51,4 +51,4 @@ print(device.get_data())
 Learn more about the Ambient Weather API at the [Ambient Weather API Documentation](https://ambientweather.docs.apiary.io/#).
 
 ## Also Check Out
-  * [Ambient APRS](https://github.com/avryhof/ambient_aprs)
+* [Ambient APRS](https://github.com/avryhof/ambient_aprs)
