@@ -95,9 +95,9 @@ class AmbientAPI:
         http_client = kwargs.get('http_client', requests)
 
         self.client = http_client
-        self.endpoint = getattr(settings, 'AMBIENT_ENDPOINT', kwargs.get('AMBIENT_ENDPOINT',None))
-        self.api_key = getattr(settings, 'AMBIENT_API_KEY',kwargs.get('AMBIENT_API_KEY',None))
-        self.application_key = getattr(settings, 'AMBIENT_APPLICATION_KEY', kwargs.get('AMBIENT_APPLICATION_KEY',None))
+        self.endpoint = getattr(settings, 'AMBIENT_ENDPOINT', kwargs.get('AMBIENT_ENDPOINT', None))
+        self.api_key = getattr(settings, 'AMBIENT_API_KEY', kwargs.get('AMBIENT_API_KEY', None))
+        self.application_key = getattr(settings, 'AMBIENT_APPLICATION_KEY', kwargs.get('AMBIENT_APPLICATION_KEY', None))
 
         default_log_level = getattr(settings, 'AMBIENT_LOG_LEVEL', None)
         self.log_level = kwargs.get('log_level', default_log_level)
@@ -160,7 +160,7 @@ class AmbientAPI:
 
         elif res.status_code == 401:
             self.log('INVALID API KEY')
-            
+
         return retn
 
     def get_devices(self):
