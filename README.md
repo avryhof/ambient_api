@@ -15,7 +15,7 @@ Python Module to access the Ambient Weather API
 pip install ambient_api
 ```
 
-##### Environmental Variables
+### Environmental Variables
 ```bash
 AMBIENT_ENDPOINT=https://api.ambientweather.net/v1
 AMBIENT_API_KEY='your-api-key-here'
@@ -26,7 +26,7 @@ Get these values by following [these instructions](https://ambientweather.docs.a
 ## Classes
 There are two classes implemented in this module.
 
-##### AmbientAPI
+### AmbientAPI
 This is the base API that you initialize in your code.
 
 ```python
@@ -36,7 +36,7 @@ api = AmbientAPI()
 ``` 
 This class takes care of authenticating to, and sending calls to the API.  It can be expanded as needed in the future.
 
-##### AmbientWeatherStation
+### AmbientWeatherStation
 This class represents a single Weather Station.  When you ask AmbientAPI for a list of devices,
 it returns a list of AmbientWeatherStations, and from this class, you can query the weather station itself.
 
@@ -51,4 +51,4 @@ print(device.get_data())
 Learn more about the Ambient Weather API at the [Ambient Weather API Documentation](https://ambientweather.docs.apiary.io/#).
 
 ## Also Check Out
-* [Ambient APRS](https://github.com/avryhof/ambient_aprs)
+  * [Ambient APRS](https://github.com/avryhof/ambient_aprs)
