@@ -3,8 +3,12 @@ python:
   - "2.7"
   - "3.6"
 # command to install dependencies
+addons:
+  sonarcloud:
+    organization: "avryhof-travis"
 script:
   - python test.py
+  - sonar-scanner
   - coverage run test.py
 branches:
   only:
