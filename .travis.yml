@@ -7,7 +7,6 @@ addons:
   sonarcloud:
     organization: "avryhof-travis"
 script:
-  - python test.py
   - sonar-scanner
   - coverage run test.py
 branches:
