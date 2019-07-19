@@ -30,7 +30,7 @@ There are two classes implemented in this module.
 This is the base API that you initialize in your code.
 
 ```python
-from ambient_api import AmbientAPI
+from ambient_api.ambientapi import AmbientAPI
 
 api = AmbientAPI()
 ``` 
