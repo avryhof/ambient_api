@@ -1,5 +1,5 @@
-certifi==2018.4.16
+certifi>=2019.11.28
 chardet==3.0.4
-idna==2.6
-requests>=2.20.0
-urllib3>=1.23
+idna<=2.9
+requests>=2.22.0
+urllib3 <1.26
