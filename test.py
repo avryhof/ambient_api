@@ -13,7 +13,7 @@ for device in devices:
     # This probably won't happen much in real world situations.
     time.sleep(2)
     print('Device')
-    print(str(device))
+    print((str(device)))
 
     print('Last Data')
     pprint.pprint(device.last_data)

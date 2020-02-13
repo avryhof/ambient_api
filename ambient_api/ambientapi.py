@@ -135,7 +135,7 @@ class AmbientAPI:
             'apiKey': self.api_key
         }
 
-        for kwarg_k, kwarg_v in kwargs.items():
+        for kwarg_k, kwarg_v in list(kwargs.items()):
             params.update({kwarg_k: kwarg_v})
 
         # Remove sensitive parameters from log
