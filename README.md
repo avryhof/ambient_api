@@ -31,6 +31,7 @@ This is the base API that you initialize in your code.
 
 ```python
 from ambient_api.ambientapi import AmbientAPI
+import time
 
 api = AmbientAPI()
 ``` 
@@ -44,6 +45,8 @@ it returns a list of AmbientWeatherStations, and from this class, you can query 
 devices = api.get_devices()
 
 device = devices[0]
+
+time.sleep(1) #pause for a second to avoid API limits
 
 print(device.get_data())
 ```
