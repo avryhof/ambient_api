@@ -23,6 +23,8 @@ AMBIENT_APPLICATION_KEY='your-application-key-here'
 ```
 Get these values by following [these instructions](https://ambientweather.docs.apiary.io/#introduction/authentication).
 
+Still struggling, check out the [Authentication](https://github.com/avryhof/ambient_api_postman_collection#authentication) documentation in my [Postman Collection](https://github.com/avryhof/ambient_api_postman_collection) repo.
+
 ## Classes
 There are two classes implemented in this module.
 
@@ -55,3 +57,4 @@ Learn more about the Ambient Weather API at the [Ambient Weather API Documentati
 
 ## Also Check Out
 * [Ambient APRS](https://github.com/avryhof/ambient_aprs)
+* Not into Python?  Stuck on something with the Ambient Weather API and need more info?  Check out the repo for my [Postman Collection](https://github.com/avryhof/ambient_api_postman_collection)
