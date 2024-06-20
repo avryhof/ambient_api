@@ -4,14 +4,13 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: [ 'pypy3.8', 'pypy3.9' ]
     steps:
     - uses: actions/checkout@v4
-    - name: Set up Python ${{ matrix.python-version }
+    - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v5
       with:
           python-version: ${{ matrix.python-version }}
