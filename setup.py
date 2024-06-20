@@ -10,6 +10,7 @@ setup(
     author_email="amos@vryhofresearch.com",
     description="A Python class for accessing the Ambient Weather API.",
     long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
