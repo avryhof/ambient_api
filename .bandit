@@ -1,1 +1,2 @@
 [bandit]
+exclude = test.py
